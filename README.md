@@ -10,7 +10,6 @@ Bu uygulama Patika ve Picus Security iş birliğinde gerçekleşen Golang Backen
 - [Uygulama İsterleri](#uygulama-i%CC%87sterleri)  
 - [Uygulama Öncesi Hazırlık](#uygulama-%C3%B6ncesi-haz%C4%B1rl%C4%B1k)  
 - [Uygulama Aşamaları](#uygulama-a%C5%9Famalar%C4%B1)  
-- [Uygulama Çıktısı](#uygulama-%C3%A7%C4%B1kt%C4%B1s%C4%B1) 
 
 
 <br>  
@@ -229,12 +228,7 @@ func (g *BookDB) UpdateStock(id, stock int, book Book) {
 - **Search** işlemi için ise GetBookByName fonksiyonunu kullandım. Bu fonksiyonda `Where(" Name LIKE ?", "%"+name+"%").Find(&book)` kullanarak aranan girdi ile dbde sorgulama yaptım ve `Book` olarak return ettim.
 - **Buy** ile update işlemlerini ise UpdateStock fonksiyonu içinde gerçekleştirdim. Öncelikle `n` isimli bir slice tanımladım ve `g.db.Model(&book).Pluck("stock_number", &n)` kullanarak dbde bulunan bütün `stock_num` değerlerini getirdim. Ardından bu slice içinde bulunan değerleri kullanarak ürünün yeterli sayıda olup olmadığını kontrol ettim ardından eğer yeterli sayıda ürün var ise update işlemini gerçekleştirdim.
 
-# Uygulama Çıktısı
-Aşağıda uygulamanın çalışırlığını gözlemleyebilirsiniz.
 
-<br>
-
-![CRUD](./gif/crud.gif)  
 
 
 
