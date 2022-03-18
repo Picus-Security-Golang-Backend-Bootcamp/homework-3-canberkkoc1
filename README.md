@@ -234,7 +234,7 @@ Aşağıda uygulamanın çalışırlığını gözlemleyebilirsiniz.
 
 <br>
 
-![CRUD]()  
+![CRUD](./gif/crud.gif)  
 
 
 
